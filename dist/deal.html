@@ -1,0 +1,504 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Deal Page</title>
+    <meta name="description" content="Page Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="css/app.css">       
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--HEADER START-->
+    <header class="header">
+        <!--MAIN HEADER START-->
+        <div class="header__main">
+            <div class="g-container">
+                <a href="#" class="header__logo">
+                    <span class="header__logo-title">Миколаївська міська рада</span>
+                    Контактний центр міста Миколаєва
+                </a>
+                <button class="header__menu-btn js-mtoggle"><i class="icon-menu"></i></button>
+                <a href="tel:+380512373010" class="header__tel"><i class="flaticon-call2"></i>15-88</a>
+            </div><!--/g-container-->
+        </div>
+        <!--/MAIN HEADER END-->
+
+        <!--HEADER MENU START-->
+        <div class="header__menu js-header">
+            <nav class="g-container">
+                <ul class="menu js-menu">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Залишити звернення</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">Пункт 1</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">Пункт 2</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">Пункт 3</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">Пункт 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#check" class="menu__link" data-modal="#check">Перевірити виконання</a>
+                    </li>
+                </ul>
+                <ul class="menu menu--right">
+                    <li class="menu__item">
+                        <a href="#login" class="menu__link" data-modal="#login">
+                            <i class="flaticon-key60"></i> кабінет
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="about.html" class="menu__link">
+                            <i class="flaticon-round66"></i> про нас
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="search.html" class="menu__link">
+                            <i class="flaticon-magnifier52"></i> пошук
+                        </a>
+                    </li>
+                </ul>                            
+            </nav><!--/g-container-->
+        </div><!--/header__menu-->
+        <!--/HEADER MENU END-->
+    </header>
+    <!--/HEADER END-->
+
+
+    <!--MAIN SECTION START-->
+    <main class="page">
+        <div class="g-container">
+            <h1 class="page-title page-title--h1">
+                <span class="page-title__inner">Відправити звернення</span>
+            </h1>
+            <div class="page__block">
+                <div class="g-row">
+                    <div class="g-col g-col--two-thirds">
+                        <p>
+                            <span class="g-red-color">* - поля обов'язкові для заповнення</span>
+                        </p>  
+                    </div>
+                    <div class="g-col g-col--one-third">
+                        <p class="g-text-right g-big-text">
+                            <a href="regist.html">Редагувати мої дані</a>
+                        </p>
+                    </div>
+                </div>
+                             
+                <form>
+                    <fieldset class="g-fieldset">
+                        <legend class="g-legend">Реєстраційні дані заявника</legend>
+                        <div class="g-row">
+                            <div class="g-col g-col--one-third">
+                                <label class="g-label">Прізвище:<span class="g-red-color">*</span></label>
+                                <input type="text" class="g-input" value="Гарбузов" required />
+                            </div>
+                            <div class="g-col g-col--one-third">
+                                <label class="g-label">Iм'я:<span class="g-red-color">*</span></label>
+                                <input type="text" class="g-input" value="Гарбуз" required />
+                            </div>
+                            <div class="g-col g-col--one-third">
+                                <label class="g-label">По батькові:<span class="g-red-color">*</span></label>
+                                <input type="text" class="g-input" value="Гарбузович" required />
+                            </div>
+                        </div>
+                        <div class="g-row">
+                            <div class="g-col g-col--one-half">
+                                <label class="g-label">E-mail:<span class="g-red-color">*</span></label>
+                                <input type="email" class="g-input" value="garbuz@gmail.com" required />
+                            </div>
+                            <div class="g-col g-col--one-half">
+                                <label class="g-label">Рік народження:<span class="g-red-color">*</span></label>
+                                <input type="text" class="g-input" value="1927" required />
+                            </div>
+                        </div>
+                        <div class="g-row">
+                            <div class="g-col g-col--one-half">
+                                <label class="g-label">Соціальний стан:<span class="g-red-color">*</span></label>
+                                <input class="g-input" value="Пенсіонер" required />
+                            </div>
+                            <div class="g-col g-col--one-half">
+                                <label class="g-label">Пільгова категорія:<span class="g-red-color">*</span></label>
+                                <input class="g-input" value="Учасник війни" required />
+                            </div>
+                        </div>
+                        <div class="g-row">
+                            <div class="g-col g-col--one-half">
+                                <label class="g-label">Район:<span class="g-red-color">*</span></label>
+                                <input type="text" class="g-input" value="Корабельний" required />
+                            </div>
+                            <div class="g-col g-col--one-half">
+                                <label class="g-label">Контактний телефон:<span class="g-red-color">*</span></label>
+                                <input type="text" class="g-input" value="044-322-22-22" required />
+                            </div>
+                        </div>
+                        <div class="g-row">
+                            <div class="g-col g-col--one-half">
+                                <label class="g-label">Вулиця:<span class="g-red-color">*</span></label>
+                                <input type="text" class="g-input" value="Гарбузова" required />
+                            </div>
+                            <div class="g-col g-col--one-fourth">
+                                <label class="g-label">Будинок:<span class="g-red-color">*</span></label>
+                                <input type="text" class="g-input" value="11" required />
+                            </div>
+                            <div class="g-col g-col--one-fourth">
+                                <label class="g-label">Квартира:<span class="g-red-color">*</span></label>
+                                <input type="text" class="g-input" value="2" required />
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="g-fieldset">
+                        <legend class="g-legend">Інформація про проблему</legend>
+                        <div class="g-row">
+                            <div class="g-col g-col--one-half">
+                                <label class="g-label">Тип звернення<span class="g-red-color">*</span></label>
+                                <select class="g-select">
+                                    <option disabled selected>Оберіть тип звернення</option>
+                                    <option>Пропозиція</option>
+                                    <option>Скарга</option>
+                                </select>
+                            </div>
+                            <div class="g-col g-col--one-half">
+                                <label class="g-label">Тeма / напрямок<span class="g-red-color">*</span></label>
+                                <select class="g-select">
+                                    <option disabled selected>Оберіть тему, напрямок</option>
+                                    <option>Транспорт</option>
+                                    <option>ЖКГ</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="g-row">
+                            <div class="g-col g-col--one-half-center">
+                                <p>&nbsp;</p>
+                                <p>
+                                    <label class="g-label">
+                                        <input type="checkbox" />
+                                        <span class="g-label__body">Предмет звернення не має територіальної прив'зки</span>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label class="g-label">
+                                        <input type="checkbox" />
+                                        <span class="g-label__body">Місцезнаходження проблеми співпадає з адресою проживання</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="g-row">
+                            <div class="g-col g-col--one-half">
+                                <label class="g-label">Район:<span class="g-red-color">*</span></label>
+                                <select class="g-select" required>
+                                    <option disabled selected>Оберіть район</option>
+                                    <option>Центральний</option>
+                                    <option>Корабельний</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="g-row">
+                            <div class="g-col g-col--one-half">
+                                <label class="g-label">Вулиця:<span class="g-red-color">*</span></label>
+                                <select class="g-select" required>
+                                    <option disabled selected>Оберіть вулицю</option>
+                                    <option>вулиця Гарбузова</option>
+                                    <option>вулиця Динамо Київ</option>
+                                </select>
+                            </div>
+                            <div class="g-col g-col--one-fourth">
+                                <label class="g-label">Будинок:<span class="g-red-color">*</span></label>
+                                <select class="g-select" required>
+                                    <option disabled selected>Оберіть будинок</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+                            <div class="g-col g-col--one-fourth">
+                                <label class="g-label">Квартира:<span class="g-red-color">*</span></label>
+                                <input type="text" class="g-input" required />
+                            </div>
+                        </div>
+                        <div class="g-row">
+                            <div class="g-col g-col--one-half-center g-text-center">
+                                <p>&nbsp;</p>
+                                <p>Просимо вказувати найближчу до проблеми адресу</p>
+                                <p>
+                                    <a href="#modal_map" class="b-dashed-link" data-modal="#modal_map">Уточнити місцезнаходження проблеми на мапі</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <label class="g-label">Текст повідомлення<span class="g-red-color">*</span></label>
+                        <textarea class="g-textarea" required></textarea>
+                        <p class="g-small-text">
+                            Доступна кількість символів: <span class="g-brand-color"><b>2500</b></span>
+                        </p>
+                        <p>
+                            <label class="g-label">
+                                <input type="radio" name="r1" checked />
+                                <span class="g-label__body">Я згоден (а), що текст мого звернення та відповідь виконавця буде доступний іншим користувачам.</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label class="g-label">
+                                <input type="radio" name="r1" />
+                                <span class="g-label__body">Я не хочу, щоб текст мого звернення був доступний іншим громадянам</span>
+                            </label>
+                        </p>
+                        <p>
+                            <input type="file" name="file" id="file" class="g-inputfile js-inputfile" data-multiple-caption="{count} файл (а) обрано" multiple />
+                            <label for="file"><i class="icon-upload"></i><span>оберіть файли</span></label>
+                        </p>
+                        <p>
+                            Увага! Допускається до 8 файлів, обсягом не більше 2 мегабайт.<br />
+                            Приймаються файли у форматах: jpeg, jpg, gif, png, bmp, avi, flv, asf, mpg, mpeg, mp4, mkv, mov, wmv, 3gp.
+                        </p>
+                    </fieldset>
+                    <p>
+                        Звертаємо вашу увагу, що звернення не приймається до розгляду, якщо:
+                    </p>
+                    <ul>
+                        <li>містить нецензурну лексику або образи;</li>
+                        <li>текст та персональні дані (П.І.П.) написано з використанням латиниці.</li>
+                    </ul>
+                    <p>
+                        Також просимо не порушувати в одному зверненні декілька питань.
+                    </p>
+                    <button type="submit" class="g-btn">відправити звернення</button>
+                    <button type="button" class="g-btn">відминити</button>
+                </form>
+            </div><!--/page__block-->
+        </div><!--/g-container-->
+    </main>
+    <!--/MAIN SECTION END-->
+
+    <!--MOBILE MENU START-->
+    <nav class="m-menu js-mmenu">
+        <ul class="m-menu__list">
+            <li class="m-menu__item">
+                <label class="m-menu__label">Меню</label>
+            </li>
+            <li class="m-menu__item">
+                <a href="index.html" class="m-menu__link">Головна</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="#" class="m-menu__link">Залишити звернення</a>
+                <ul class="m-submenu">
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Пункт 1</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Пункт 2</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Пункт 3</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Пункт4</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="m-menu__item">
+                <a href="#check" class="m-menu__link" data-modal="#check">Перевірити виконання</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="#login" class="m-menu__link" data-modal="#login"><i class="flaticon-key60"></i> Кабінет</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="about.html" class="m-menu__link"><i class="flaticon-round66"></i> Про нас</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="search.html" class="m-menu__link"><i class="flaticon-magnifier52"></i> Пошук</a>
+            </li>
+        </ul>
+    </nav>
+    <!--/MOBILE MENU END-->
+
+    <!--MODAL WINDOWS START-->
+    <div class="modal" id="login">
+        <form class="modal__content">
+            <div class="g-title-h1"><i class="flaticon-key60"></i> Кабінет</div>
+            <label class="g-label">E-mail</label>
+            <input type="email" class="g-input" required />
+            <label class="g-label">Пароль</label>
+            <input type="password" class="g-input" required />
+            <div class="g-row">
+                <div class="g-col g-col--one-half">
+                    <a href="#">Забули пароль?</a>
+                    <br />
+                    <a href="regist.html">Реєстрація</a>
+                </div>
+                <div class="g-col g-col--one-half">
+                    <button type="submit" class="g-btn g-full-width">увійти</button>
+                </div>
+            </div>
+            <div class="g-text-center">
+                <p>АБО</p>
+                <a href="#"><img src="http://placehold.it/100x40" alt="" /></a>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal" id="check">
+        <form class="modal__content">
+            <div class="g-title-h1">Перевірити виконання</div>
+            <label class="g-label">Номер звернення</label>
+            <input type="text" class="g-input" required />
+            <label class="g-label">Рік</label>
+            <select class="g-select">
+                <option selected>2016</option>
+                <option>2015</option>
+                <option>2014</option>
+                <option>2013</option>
+            </select>
+            <button type="submit" class="g-btn">перевірити</button>
+        </form>
+    </div>
+
+    <div class="modal modal--wide" id="modal_map">
+        <div class="modal__content">
+            <span class="g-title-h1">Оберіть на карті</span>
+            <div class="b-modal-map" id="map"></div>
+            <div class="g-text-center">
+                <button type="button" class="g-btn">зберегти</button>
+            </div>
+        </div>
+    </div>
+    <!--/MODAL WINDOWS END-->
+
+    <!--FOOTER START-->
+    <footer class="footer">
+
+        <!--FOOTER MAIN START-->
+        <div class="footer__main">
+            <div class="g-container">
+                <div class="g-col g-col--one-third">
+                    <a href="#" class="logo">
+                        Миколаївська міська рада
+                        <!--Николаевский городской совет-->
+                        <span class="logo__caption">Контактний центр</span>
+                    </a>
+                </div>
+                <div class="g-col g-col--one-third">
+                    <a href="tel:+380512373010" class="footer__tel"><i class="flaticon-telephone60"></i>(0512) 37-30-10, 15-88</a>
+                </div>
+                <div class="g-col g-col--one-third">
+                    <form class="f-search">
+                        <label class="g-visuallyhidden">Пошук</label>
+                        <input type="search" class="f-search__input" placeholder="Пошук по порталу" />
+                        <button type="submit" class="f-search__btn"><i class="flaticon-magnifier52"></i></button>
+                    </form>
+                </div>
+            </div><!--/g-container-->
+        </div>
+        <!--/FOOTER MAIN END-->
+
+        <!--FOOTER SOLE START-->
+        <div class="footer__sole">
+            <div class="g-container">
+                <div class="footer__caption">
+                    <i class="icon-copyright"></i>2015 Миколаївська міська рада
+                    <br />
+                    Розробник: Kitsoft
+                </div>
+
+                <ul class="social">
+                    <li class="social__item">
+                        <a href="#" class="social__link social__link--fbk" target="_blank">
+                            <i class="icon-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link social__link--twr" target="_blank">
+                            <i class="icon-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link social__link--ins" target="_blank">
+                            <i class="icon-instagramm"></i>
+                        </a>    
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link social__link--ybe" target="_blank">
+                            <i class="icon-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link social__link--rss" target="_blank">
+                            <i class="icon-rss"></i>
+                        </a>
+                    </li>
+                </ul>
+                
+                <ul class="f-menu">
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Контакти</a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Мапа порталу</a>
+                    </li>
+                </ul>
+            </div><!--/g-container-->
+        </div>
+        <!--/FOOTER SOLE END-->
+    </footer>
+    <!--/FOOTER END-->
+
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.4.min.js"><\/script>')</script>
+    <script src="js/app.min.js"></script>
+
+    <!--GOOGLE MAPS SCRIPT START-->
+    <script>
+        function initialize() {
+            var myLating = new google.maps.LatLng(46.975033, 31.994577);
+
+            var mapOptions = {
+                zoom: 13,
+                center: myLating,
+                panControl: false,
+                zoomControl: true,
+                scrollwheel: false,
+                streetViewControl: false,
+                scaleControl: true,
+                mapTypeId: google.maps.MapTypeId.ROAD,
+                scroll: { x: $(window).scrollLeft(), y: $(window).scrollTop() }
+            };
+
+
+            var map = new google.maps.Map(document.getElementById('map'),
+                mapOptions);
+
+        }
+
+        function loadScript() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
+                'callback=initialize';
+            document.body.appendChild(script);
+        }
+
+        window.onload = loadScript;
+    </script>
+    <!--/GOOGLE MAPS SCRIPT END-->
+
+    
+</body>
+</html>

@@ -8,6 +8,7 @@
 // Календарь
 // Слайдеры
 // Фотогалерея
+// Стилизация input[type=file]
 // Если о плейсхолдерах не слышали
 
 jQuery(document).ready(function ($) {
@@ -216,6 +217,7 @@ jQuery(document).ready(function ($) {
             $modal.show();
             $overlay.show();
             $overlay.bind('click', method.close);
+            method.resizeMap(link);
         };
 
         // закрываем
@@ -226,6 +228,13 @@ jQuery(document).ready(function ($) {
             });
             $window.unbind('resize.modal');
         };
+
+        method.resizeMap = function (link) {//если в окне Гугл-карта - перерисуем ее после открытия
+            var $map = $(link).find('.b-modal-map');
+            if ($map.length) {
+                google.maps.event.trigger(map, "resize");
+            }
+        }
 
         return method;
     }());
@@ -591,7 +600,38 @@ jQuery(document).ready(function ($) {
     function initGallery() {
         $('.js-gallery a').lightbox({blur:false});
     }
-    if($('.js-gallery').length){initGallery()}
+    if ($('.js-gallery').length) { initGallery() }
+
+    //
+    // Стилизация input[type=file]
+    //---------------------------------------------------------------------------------------
+    function styleInputFile() {
+        $('.js-inputfile').each(function () {
+            var $input = $(this),
+                $label = $input.next('label'),
+                labelVal = $label.html();
+
+            $input.on('change', function (e) {
+                var fileName = '';
+
+                if (this.files && this.files.length > 1)
+                    fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+                else if (e.target.value)
+                    fileName = e.target.value.split('\\').pop();
+
+                if (fileName)
+                    $label.find('span').html(fileName);
+                else
+                    $label.html(labelVal);
+            });
+
+            // Firefox bug fix
+            $input
+            .on('focus', function () { $input.addClass('has-focus'); })
+            .on('blur', function () { $input.removeClass('has-focus'); });
+        });
+    }
+    if($('.js-inputfile').length){styleInputFile()}
 
     //
     // Если о плейсхолдерах не слышали

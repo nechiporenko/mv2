@@ -51,6 +51,12 @@
         width:(100%-$grid-gutter)/2;
     }
     
+    .g-col--one-half-center{
+        width:(100%-$grid-gutter)/2;
+        float:none;
+        margin-left:auto !important;
+        margin-right:auto;
+    }
     .g-col--one-third{
         width:(100%-$grid-gutter*2)/3;
     }

@@ -78,12 +78,32 @@ h1, h2, h3, h4, h5, h6, .g-title-h1, .g-title-h2, .g-title-h3, .g-title-h4 {
     color:red;
 }
 
+.g-big-text{
+    font-size:120%;
+}
+.g-small-text{
+    font-size:80%;
+}
+
 /* Links */
 a {
   color: $primary; 
     &:hover,
     &:active{
         text-decoration:none;
+    }
+}
+
+.b-dashed-link{
+    display:inline-block;
+    text-decoration:none;
+    line-height:1.2;
+    font-weight:600;
+    border-bottom:1px dashed $primary;
+
+    &:hover,
+    &:active{
+        border-bottom:none;
     }
 }
 
