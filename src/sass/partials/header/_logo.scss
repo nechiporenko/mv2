@@ -1,0 +1,151 @@
+﻿@import "../../modules/_base.scss";
+/*Header Main Section*/
+.header__main{
+    background:#031c37;
+    background:rgba(#031c37, .65);
+    padding:6px 0;
+
+    @include media($desktop){
+        padding:10px 0;
+    }
+}
+
+.header__wrap{
+    display:none;
+    @include media($desktop){
+        display:block;
+    }
+}
+
+/*Header Logo*/
+.header__logo{
+    display:block;
+    float:left;
+    @include px2rem(padding-left, 40px);
+    @include px2rem(height, 36px);
+    @include px2rem(line-height, 36px);
+    position:relative;
+    box-sizing:border-box;
+    color:#fff;
+    text-decoration:none;
+    @include font-size(11px);
+    @include px2rem(letter-spacing, -.5px);
+
+    &:before{
+        content:'';
+        display:block;
+        @include px2rem(width, 38px);
+        @include px2rem(height, 36px);
+        background-image:url(../img/logo.png);
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+        position:absolute;
+        top:0;
+        left:0;
+        @include transition(transform 1.9s);
+    }
+
+    @include media($tablet){
+        @include px2rem(height, 74px);
+        @include px2rem(line-height, 74px);
+        @include px2rem(padding-left, 90px);
+        @include font-size(21px);
+
+        &:before{
+            @include px2rem(width, 79px);
+            @include px2rem(height, 74px);
+        }
+
+        @include hidpi(1.5){
+            &:before{
+                background-image:url(../img/logo-2x.png);
+            }
+        }
+    }
+
+    @include media($desktop){
+        line-height:1;
+        @include font-size(30px);
+
+        &:hover,
+        &:active{
+            &:before{
+                @include transform(rotateY(-360deg));
+            }
+        }
+    }
+}
+
+
+.header__logo-title{
+    display:none;
+    @include font-size(18px);
+    margin:10px 0;
+
+    @include media($desktop){
+        display:block;
+    }
+}
+
+/*Header Menu-Toggle Button*/
+.header__menu-btn{
+    display:inline-block;
+    padding:0 6px;
+    margin:0;
+    float:right;
+    height:36px;
+    border:1px solid #fff;
+    color:#fff;
+    border-radius:4px;
+    background:#001224;
+    @include font-size(18px);
+
+    &:hover,
+    &:focus{
+        color:#ccc;
+        border-color:#ccc;
+        outline:0;
+    }
+
+    @include media($tablet){
+        margin:19px 0 0 10px;
+    }
+
+    @include media($desktop){
+        display:none;
+    }
+}
+
+/*Header Phone*/
+.header__tel{
+    float:right;
+    white-space:nowrap;
+    height:74px;
+    line-height:78px;
+    white-space:nowrap;
+    @include font-size(21px);
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    display:none;
+    
+    @include media($tablet){
+        display:inline-block;
+    }
+
+    @include media($desktop){
+        margin-right:70px;
+        @include font-size(52px);
+    }
+
+    
+
+    [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+    [class^="flaticon-"]:after, [class*=" flaticon-"]:after{
+        //font-size:120%;
+        margin-right:10px;
+        vertical-align:top;
+    }
+
+}

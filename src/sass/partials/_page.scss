@@ -1,0 +1,54 @@
+﻿@import "../modules/_base.scss";
+
+
+
+@import "page/_map-box.scss"; //карта
+@import "page/_titles.scss"; //заголовки
+@import "page/_mobile-addons.scss";
+
+@import "page/_pagination.scss";
+
+
+/*Page Grid*/
+.page{
+    padding-top:25px;
+    padding-bottom:25px;
+    min-height:680px;
+    box-sizing:border-box;
+}
+
+
+
+/*Homepage Grid*/
+.h-page{
+    margin-top:690px;
+    padding:25px 0;
+
+    @include media($tablet){
+        margin-top:666px;
+    }
+}
+
+
+/*Wide Page Inner*/
+.page__inner{
+    width:100%;
+    max-width:1280px;
+    margin:0 auto;
+    @include px2rem(padding, 0 30px);
+    box-sizing:border-box;
+}
+
+
+.page__block{
+    padding:15px;
+    background:#fff;
+    @include font-size(14px);
+}
+
+/*Page - Feed Modification*/
+.page--feed{
+    margin-top:0;
+    min-height:400px;
+}
+

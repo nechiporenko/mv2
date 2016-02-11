@@ -1,0 +1,48 @@
+﻿@import "../../modules/_base.scss";
+.m-addon{
+    @extend .g-clearfix;
+    padding:15px;
+    background:#fff;
+    text-align:center;
+}
+.m-addon__link,
+.m-addon__code{
+    display:inline-block;
+    width:142px;
+    height:142px;
+    vertical-align:middle;
+    text-decoration:none;
+}
+
+.m-addon__link{
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+
+.m-addon__link--android{
+    background-image:url(../img/android-logo.svg);
+}
+
+.m-addon__link--iphone{
+    background-image:url(../img/apple-logo.svg);
+}
+
+.no-svg{
+    .m-addon__link--android{
+        background-image:url(../img/android-logo.png);
+    }
+
+    .m-addon__link--iphone{
+        background-image:url(../img/apple-logo.png);
+    }
+}
+
+.m-addon__title{
+    display:block;
+    margin:15px 0;
+    line-height:1.1;
+    @include font-size(18px);
+    font-weight:bold;
+    color:#175179;
+    text-decoration:none;
+}

@@ -1,0 +1,138 @@
+﻿@import "../../modules/_base.scss";
+/*Item Section*/
+.b-item{
+    width:100%;
+    margin:15px 0 40px;
+    color:#000;
+    @extend .g-clearfix;
+}
+
+.b-item__inner{
+    padding:10px 20px;
+    background:#fff;
+    box-sizing:border-box;
+}
+.b-item__map{
+    height:360px;
+    background:#ccc;
+}
+
+
+.b-item__content{
+    min-height:340px;
+    @include font-size(14px);
+    line-height:1.6;
+}
+
+@include media($desktop){
+    .b-item__inner,
+    .b-item__map{
+        width:50%;
+        float:left;
+    }
+    .b-item__map{
+        min-height:360px;
+    }
+
+    .b-item--no-map{
+        .b-item__inner{
+            width:100%;
+        }
+        .b-item__map{
+            display:none;
+        }
+    }
+}
+
+
+.b-item__tag{
+    padding-top:9px;
+    @include font-size(12px);
+    color:#878787;
+}
+.b-item__id,
+.b-item__date{
+    @include font-size(14px);
+    color:#000;
+}
+
+.b-item__count{
+    @extend .feed-state__count;
+
+    @include media($tablet){
+        float:right;
+    }
+}
+.b-item__label{
+    @extend .feed-state__label;
+}
+
+.b-item__title,
+.b-item__term{
+    display:block;
+    @include px2rem(margin-bottom, $project-line-height);
+    line-height:strip-units($project-line-height/14);
+    @include font-size(18px);
+    font-weight:700;
+}
+.b-item__title{
+    margin-top:10px;
+    text-transform:uppercase;
+    color:$primary;
+
+    @include media($tablet){
+        margin-top:0;
+    }
+}
+
+.b-item__term{
+    color:$primary-alt;
+}
+
+.b-item__def{
+    color:#878787;
+}
+
+.b-item__state{
+    color:#028812;
+}
+.b-item__state--danger{
+    color:#ff0000;
+}
+
+/*Action List*/
+.action-list{
+    list-style-type:none;
+    padding:0;
+    max-width:500px;
+    margin:15px auto 0;
+    font-size:0;
+}
+.action-list__item{
+    display:block;
+    padding:10px;
+    box-sizing:border-box;
+    @include font-size(14px);
+
+    @include media($small){
+        display:inline-block;
+        vertical-align:top;
+        width:25%;
+    }
+}
+.action-list__link{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    color:#000;
+
+    &:hover,
+    &:active{
+        color:$primary;
+    }
+}
+.action-list__icon{
+    display:block;
+    height:50px;
+    @include font-size(30px);
+}

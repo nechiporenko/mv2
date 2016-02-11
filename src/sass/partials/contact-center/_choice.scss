@@ -1,0 +1,284 @@
+﻿@import "../../modules/_base.scss";
+/*Choice Block*/
+.b-choice{
+    padding:15px 10px;
+    background:#f8f2f8;
+    background:rgba(#f8f2f8, .8);
+    @extend .g-clearfix;
+}
+
+
+.b-choice__col{
+    @extend .g-column;
+    
+    @include media($tablet){
+         width:(100% - $grid-gutter*3)/4;
+         margin-left:$grid-gutter;
+
+         &:first-child{
+             margin-left:0;
+         }
+    }
+
+    @include media($desktop){
+        width:auto;
+        margin-left:0;
+        padding-right:10px;
+    }
+
+    @include media($large){
+        padding-right:20px;
+    }
+}
+
+.b-choice__label{
+    @extend .g-label;
+    font-weight:normal;
+    @include font-size(14px);
+
+    @include media($desktop){
+        display:inline-block;
+        margin-bottom:0;
+        vertical-align:middle;
+    }
+}
+
+.b-choice__btn{
+    @extend .g-btn;
+    float:right;
+    height:42px;
+    line-height:37px;
+    margin:0;
+    padding:0 15px;
+}
+
+
+
+
+.b-filter{
+    position:relative;
+    margin-bottom:8px;
+
+    @include media($desktop){
+        display:inline-block;
+        margin-bottom:0;
+        vertical-align:middle;
+        width:150px;
+    }
+
+    @include media($large){
+        width:190px;
+    }
+}
+.b-filter__label{
+    display:block;
+    height:42px;
+    line-height:42px;
+    padding:0 18px 0 8px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    @include font-size(14px);
+    color:#fff;
+    background:#125076;
+    overflow:hidden;
+    position:relative;
+    cursor:pointer;
+    box-sizing:border-box;
+
+    &:after{
+        content:'';
+        display:block;
+        @include triangle(8px, #fff, down);
+        position:absolute;
+        top:50%;
+        margin-top:-2px;
+        right:5px;
+    }
+}
+
+.b-filter__inner{
+    position:absolute;
+    top:45px;
+    left:0;
+    width:100%;
+    max-height:220px;
+    border:1px solid $border-color;
+    padding:10px 15px 10px 10px;
+    box-shadow:0 0 2px rgba(#000, .3);
+    background:#fff;
+    box-sizing:border-box;
+    z-index:210;
+    overflow:hidden;
+    display:none;
+
+    @include media($tablet){
+        width:180%;
+    }
+}
+
+.b-filter__inner--last{
+    @include media($tablet){
+        left:auto;
+        right:0;
+    }
+}
+
+.b-filter__inner--date{
+    max-height:none;
+    overflow:visible;
+}
+
+.b-filter__list{
+    @extend .g-clearlist;
+
+    .b-filter__list{
+        padding-left:20px;
+        margin-top:8px;
+        display:none;
+    }
+}
+
+.b-filter__item{
+    margin-top:8px;
+    @include font-size(14px);
+    white-space:nowrap;
+
+    &:first-child{
+        margin-top:0;
+    }
+}
+
+.b-filter__box{
+    display:inline-block;
+    vertical-align:middle;
+    position:relative !important;
+    padding-left:20px;
+    line-height:1.1;
+    color:#878787;
+    font-family:Arial, sans-serif;
+
+    &:before{
+        content:'\e818';
+        font-family:'fontello';
+        position:absolute;
+        top:0; left:2px;
+        @include font-size(16px);
+    }
+
+    &.checked{
+        &:before{
+            content:'\e817';
+            color:#000;
+        }
+    }
+}
+
+
+.b-filter__box--radio{
+    padding-left:25px;
+
+    &:before{
+        content:'\e81d';
+    }
+
+    &.checked{
+        &:before{
+            content:'\e81e';
+        }
+    }
+}
+
+.b-filter__check{
+    @extend .g-visuallyhidden;
+}
+.b-filter__name{
+    @include user-select(none);
+    white-space:normal;
+}
+
+.b-filter__toggle{
+    display:inline-block;
+    vertical-align:middle;
+    height:18px;
+    vertical-align:top;
+    margin:0;
+    padding:0;
+    border:none;
+    background:none;
+    color:#878787;
+    outline:none;
+    @include font-size(16px);
+
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        margin:0;
+    }
+
+    &:hover,
+    &:focus{
+        color:#000;
+    }
+}
+
+.b-filter__search{
+    @extend .g-input;
+    background:#f6f6f6;
+}
+
+
+/*Dates block*/
+.b-date{}
+
+.b-date__col{
+    float:left;
+    width:100%;
+    position:relative;
+
+    @include media($large){
+        width:(100%-$grid-gutter)/2;
+        margin-left:$grid-gutter;
+
+        &:first-child{
+            margin-left:0;
+        }
+    }
+}
+
+
+.b-date__holder{
+    position:absolute;
+    top:18px;
+    left:0;
+    z-index:210;
+}
+
+.b-date__label{
+    @extend .g-label;
+    font-weight:normal;
+    @include font-size(14px);
+}
+
+.b-date__input{
+    @extend .g-input;
+    text-align:center;
+}
+
+.b-date__btn{
+    @extend .g-btn;
+    width:100%;
+    margin-top:10px;
+    padding:0 10px;
+    height:32px;
+    line-height:27px;
+}
+
+.b-date__btn--clear{
+    border-bottom-color:#fff;
+    background:none;
+    color:$primary;
+    text-decoration:underline;
+
+    &:hover,
+    &:focus{
+        text-decoration:none;
+    }
+}

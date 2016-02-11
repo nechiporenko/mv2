@@ -1,0 +1,156 @@
+﻿/* Desktop Menu */
+@import "../../modules/_base.scss";
+
+.header__menu{
+    width:100%;
+    background:#ef8d00;
+    background:rgba(#ef8d00, .9);
+    color:#fff;
+    display:none;
+
+    @include media($desktop){
+        display:block;
+
+        &.scrolled{
+            position:fixed;
+            top:0; left:0;
+            z-index:1000;
+        }
+    }
+
+
+    .g-container{
+        position:relative;
+    }
+}
+
+.header__wrap{//добавим скриптом обертку
+    display:none;
+
+    @include media($desktop){
+        display:block;
+        height:auto;
+
+        &.scrolled{
+            height:48px; //header__menu height
+        }
+    }
+}
+
+.menu{
+    float:left;
+    @extend .g-clearlist;
+    @extend .g-clearfix;
+    font-size:0;
+    position:relative;
+    line-height:1;
+    position:relative;
+}
+
+
+.menu__item{
+    display:inline-block;
+    @include font-size(16px);
+
+    @include media($desktop){
+        @include font-size(18px);
+    }
+}
+.menu__link{
+    display:inline-block;
+    vertical-align:top;
+    padding:15px 22px;
+    line-height:1;
+    color:#fff;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-weight:600;
+    @include transition(padding-left 1s ease);
+    
+    &:hover,
+    &:active,
+    &.current,
+    &.active{
+        background:darken(#ef8d00, 5%);
+    }
+}
+
+
+.menu--right{
+    float:right;
+
+    .menu__item{
+        position:relative;
+    }
+
+    .menu__link{
+        padding-top:0;
+        padding-bottom:0;
+        height:48px;
+        line-height:48px;
+        text-transform:none;
+        font-weight:normal;
+    }
+
+    [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+    [class^="flaticon-"]:after, [class*=" flaticon-"]:after{
+        font-size:150%;
+        vertical-align:middle;
+    }
+}
+
+/*Scrolled Menu Style*/
+.scrolled{
+    @include media($desktop){
+        .menu__link{//уменьшили отступы между пунктами
+            padding-left:15px;
+            padding-right:15px;
+        }
+    }
+}
+
+
+/*Desktop Submenu*/
+.submenu{
+    @extend .g-clearlist;
+    @extend .g-clearfix;
+    width:100%;
+    position:absolute;
+    padding:8px 0;
+    top:100%; left:0;
+    z-index:1000;
+    text-align:left;
+    background:darken(#ef8d00, 5%);
+    box-sizing:border-box;
+    display:none;
+}
+
+.submenu__item{
+    @include span-columns(6);
+    @include omega(2n);
+}
+.submenu__link{
+    display:block;
+    padding:12px 18px;
+    color:#fff;
+    @include font-size(18px);
+    text-decoration:none;
+
+    &:hover,
+    &:active,
+    &.current{
+        text-decoration:underline;
+    }
+
+    &.current{
+        cursor:default;
+    }
+}
+
+.lt-ie9{
+    .submenu__item.last{
+        margin-right:0;
+    }
+}
+
+

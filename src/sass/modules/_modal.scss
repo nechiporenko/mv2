@@ -1,0 +1,55 @@
+﻿@import "base";
+
+/*Modal Windows*/
+.overlay{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index:3000;
+    display:none;
+
+    &.half{
+        z-index:900; //будем показывать при открывании десктоп-субменю - под хидером и меню
+    }
+}
+
+.modal{
+    width:100%;
+    max-width:500px;
+    position:absolute;
+    display:none;
+    box-sizing:border-box;
+    background:$primary;
+    background:rgba($primary,0.4);
+    @include px2rem(padding, 8px);
+    z-index:3100;
+}
+
+.modal__content{
+    @include px2rem(padding, 20px 10px);
+    margin:0;
+    background:#fff;
+    font-weight:300;
+
+    @include media($small){
+        @include px2rem(padding, $project-line-height 20px);
+    }
+}
+.modal__title{
+    @extend .g-title;
+    color:$primary;
+}
+.modal__close{
+    position:absolute;
+    top:15px;
+    right:15px;
+    text-decoration:none;
+    color:$primary-alt;
+    @include font-size(20px);
+}
+

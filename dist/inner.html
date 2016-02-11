@@ -1,0 +1,883 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inner Page</title>
+    <meta name="description" content="Page Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="css/app.css">       
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!--HEADER START-->
+    <header class="header">
+        <!--MAIN HEADER START-->
+        <div class="header__main">
+            <div class="g-container">
+                <a href="#" class="header__logo">
+                    <span class="header__logo-title">Миколаївська міська рада</span>
+                    Контактний центр міста Миколаєва
+                </a>
+                <button class="header__menu-btn js-mtoggle"><i class="icon-menu"></i></button>
+                <a href="tel:+380512373010" class="header__tel"><i class="flaticon-call2"></i>15-88</a>
+            </div><!--/g-container-->
+        </div>
+        <!--/MAIN HEADER END-->
+
+        <!--HEADER MENU START-->
+        <div class="header__menu js-header">
+            <nav class="g-container">
+                <ul class="menu js-menu">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Залишити звернення</a>
+                        <ul class="submenu">
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">Пункт 1</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">Пункт 2</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">Пункт 3</a>
+                            </li>
+                            <li class="submenu__item">
+                                <a href="#" class="submenu__link">Пункт 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#check" class="menu__link" data-modal="#check">Перевірити виконання</a>
+                    </li>
+                </ul>
+                <ul class="menu menu--right">
+                    <li class="menu__item">
+                        <a href="#login" class="menu__link" data-modal="#login">
+                            <i class="flaticon-key60"></i> кабінет
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="about.html" class="menu__link">
+                            <i class="flaticon-round66"></i> про нас
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="search.html" class="menu__link">
+                            <i class="flaticon-magnifier52"></i> пошук
+                        </a>
+                    </li>
+                </ul>                          
+            </nav><!--/g-container-->
+        </div><!--/header__menu-->
+        <!--/HEADER MENU END-->
+    </header>
+    <!--/HEADER END-->
+
+
+    <!--FEED MAIN SECTION START-->
+    <main class="page page--feed">
+        <div class="feed">
+            <!--FEED HEADER START-->
+            <nav class="feed__header">
+                <ul class="feed-menu">
+                    <li class="feed-menu__item">
+                        <a href="#" class="feed-menu__link current">
+                            Усі
+                            <span class="feed-menu__count">4096</span>
+                        </a>
+                    </li>
+                    <li class="feed-menu__item">
+                        <a href="#" class="feed-menu__link">
+                            В роботі
+                            <span class="feed-menu__count">787</span>
+                        </a>
+                    </li>
+                    <li class="feed-menu__item">
+                        <a href="#" class="feed-menu__link">
+                            Виконано
+                            <span class="feed-menu__count">2591</span>
+                        </a>
+                    </li>
+                    <li class="feed-menu__item">
+                        <a href="#" class="feed-menu__link">
+                            Не виконано
+                            <span class="feed-menu__count">218</span>
+                        </a>
+                    </li>
+                </ul>
+                <form class="feed-search">
+                    <input type="search" class="feed-search__input" placeholder="Пошук за ключовими словами" />
+                </form>
+            </nav>
+            <!--/FEED HEADER END-->
+
+            <!--FEED FILTER START-->
+            <div class="feed__filter">
+                <div class="g-col g-col--one-fifth">
+                    <div class="g-label">Дата:</div>
+                    <div class="b-filter">
+                        <label class="b-filter__label">Усі</label>
+                        <div class="b-filter__inner b-filter__inner--date">
+                            <!--CALENDAR START-->
+                            <div class="b-date js-calendar">
+                                <div class="g-row">
+                                    <div class="b-date__col">
+                                        <label class="b-date__label">Початок періоду</label>
+                                        <input type="text" class="b-date__input" id="start_date" placeholder="дд.мм.рррр" />
+                                        <div class="b-date__holder js-dateholder" id="start_holder"></div>
+                                    </div>
+                                    <div class="b-date__col">
+                                        <label class="b-date__label">Кінець періоду</label>
+                                        <input type="text" class="b-date__input" id="end_date" placeholder="дд.мм.рррр" />
+                                        <div class="b-date__holder js-dateholder" id="end_holder"></div>
+                                    </div>
+                                </div>
+                                <div class="g-row">
+                                    <div class="g-col g-col--one-half">
+                                        <button type="button" class="b-date__btn b-date__btn--day">день</button>
+                                    </div>
+                                    <div class="g-col g-col--one-half">
+                                        <button type="button" class="b-date__btn b-date__btn--week">тиждень</button>
+                                    </div>
+                                </div>
+                                <div class="g-row">
+                                    <div class="g-col g-col--one-half">
+                                        <button type="button" class="b-date__btn b-date__btn--month">місяць</button>
+                                    </div>
+                                    <div class="g-col g-col--one-half">
+                                        <button type="button" class="b-date__btn b-date__btn--clear">скасувати</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/CALENDAR END-->
+                        </div><!--/b-filter__inner-->
+                    </div><!--/b-filter-->
+                </div>
+
+                <div class="g-col g-col--one-fifth">
+                    <label class="g-label">Тема:</label>
+                    <div class="b-filter">
+                        <label class="b-filter__label">Усі</label>
+                        <div class="b-filter__inner js-scroll" id="list1">
+                            <input class="b-filter__search" placeholder="Знайти тему..." />
+                            <ul class="b-filter__list js-checkbox-list js-search-list">
+                                <li class="b-filter__item">
+                                    <label class="b-filter__box">
+                                        <input type="checkbox" class="b-filter__check" checked />
+                                        <span class="b-filter__name">Усі</span>
+                                    </label>
+                                </li>
+                                <li class="b-filter__item">
+                                    <button type="button" class="b-filter__toggle">
+                                        <i class="icon-plus-squared-alt"></i>
+                                    </button>
+                                    <label class="b-filter__box">
+                                        <input type="checkbox" class="b-filter__check" />
+                                        <span class="b-filter__name">Житлово-комунальна інфраструктура</span>
+                                    </label>
+                                    <ul class="b-filter__list">
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 1</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 2</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 3</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 4</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="b-filter__item">
+                                    <button type="button" class="b-filter__toggle">
+                                        <i class="icon-plus-squared-alt"></i>
+                                    </button>
+                                    <label class="b-filter__box">
+                                        <input type="checkbox" class="b-filter__check" />
+                                        <span class="b-filter__name">Благоустрій та довкілля</span>
+                                    </label>
+                                    <ul class="b-filter__list">
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 1</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 2</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 3</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 4</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="b-filter__item">
+                                    <button type="button" class="b-filter__toggle">
+                                        <i class="icon-plus-squared-alt"></i>
+                                    </button>
+                                    <label class="b-filter__box">
+                                        <input type="checkbox" class="b-filter__check" />
+                                        <span class="b-filter__name">Транспорт</span>
+                                    </label>
+                                    <ul class="b-filter__list">
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 1</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 2</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 3</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 4</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="b-filter__item">
+                                    <button type="button" class="b-filter__toggle">
+                                        <i class="icon-plus-squared-alt"></i>
+                                    </button>
+                                    <label class="b-filter__box">
+                                        <input type="checkbox" class="b-filter__check" />
+                                        <span class="b-filter__name">Дорожнє господарство</span>
+                                    </label>
+                                    <ul class="b-filter__list">
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 1</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 2</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 3</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 4</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="b-filter__item">
+                                    <button type="button" class="b-filter__toggle">
+                                        <i class="icon-plus-squared-alt"></i>
+                                    </button>
+                                    <label class="b-filter__box">
+                                        <input type="checkbox" class="b-filter__check" />
+                                        <span class="b-filter__name">Сміття</span>
+                                    </label>
+                                    <ul class="b-filter__list">
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 1</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 2</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 3</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 4</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="b-filter__item">
+                                    <button type="button" class="b-filter__toggle">
+                                        <i class="icon-plus-squared-alt"></i>
+                                    </button>
+                                    <label class="b-filter__box">
+                                        <input type="checkbox" class="b-filter__check" />
+                                        <span class="b-filter__name">МАФи та стихійна торгівля</span>
+                                    </label>
+                                    <ul class="b-filter__list">
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 1</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 2</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 3</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Пункт 4</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="b-filter__item">
+                                    <button type="button" class="b-filter__toggle">
+                                        <i class="icon-plus-squared-alt"></i>
+                                    </button>
+                                    <label class="b-filter__box">
+                                        <input type="checkbox" class="b-filter__check" />
+                                        <span class="b-filter__name">Тварини в місті</span>
+                                    </label>
+                                    <ul class="b-filter__list">
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Вигул тварин</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Притулок для тварин</span>
+                                            </label>
+                                        </li>
+                                        <li class="b-filter__item">
+                                            <label class="b-filter__box">
+                                                <input type="checkbox" class="b-filter__check" />
+                                                <span class="b-filter__name">Безпритульні тварини</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--/b-filter-->
+                </div>
+
+                <div class="g-col g-col--one-fifth">
+                    <label class="g-label">Район:</label>
+                    <div class="b-filter">
+                        <label class="b-filter__label">Усі</label>
+                        <div class="b-filter__inner">
+                            <ul class="b-filter__list js-checkbox-list">
+                                <li class="b-filter__item">
+                                    <label class="b-filter__box">
+                                        <input type="checkbox" class="b-filter__check" checked />
+                                        <span class="b-filter__name">Усі</span>
+                                    </label>
+                                </li>
+                                <li class="b-filter__item">
+                                    <label class="b-filter__box">
+                                        <input type="checkbox" class="b-filter__check" />
+                                        <span class="b-filter__name">Центральний</span>
+                                    </label>
+                                </li>
+                                <li class="b-filter__item">
+                                    <label class="b-filter__box">
+                                        <input type="checkbox" class="b-filter__check" />
+                                        <span class="b-filter__name">Заводський</span>
+                                    </label>
+                                </li>
+                                <li class="b-filter__item">
+                                    <label class="b-filter__box">
+                                        <input type="checkbox" class="b-filter__check" />
+                                        <span class="b-filter__name">Ленінський</span>
+                                    </label>
+                                </li>
+                                <li class="b-filter__item">
+                                    <label class="b-filter__box">
+                                        <input type="checkbox" class="b-filter__check" />
+                                        <span class="b-filter__name">Корабельний</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--/b-filter-->
+                </div>
+
+                <div class="g-col g-col--one-fifth">
+                    <label class="g-label">Сортувати за:</label>
+                    <div class="b-filter">
+                        <label class="b-filter__label">Усі</label>
+                        <div class="b-filter__inner">
+                            <ul class="b-filter__list js-checkbox-list">
+                                <li class="b-filter__item">
+                                    <label class="b-filter__box b-filter__box--radio">
+                                        <input type="radio" name="radio1" class="b-filter__check" checked />
+                                        <span class="b-filter__name">Датою створення&nbsp;&#8593;</span>
+                                    </label>
+                                </li>
+                                <li class="b-filter__item">
+                                    <label class="b-filter__box b-filter__box--radio">
+                                        <input type="radio" name="radio1" class="b-filter__check" />
+                                        <span class="b-filter__name">Датою створення&nbsp;&#8595;</span>
+                                    </label>
+                                </li>
+                                <li class="b-filter__item">
+                                    <label class="b-filter__box b-filter__box--radio">
+                                        <input type="radio" name="radio1" class="b-filter__check" />
+                                        <span class="b-filter__name">За назвою</span>
+                                    </label>
+                                </li>
+                                <li class="b-filter__item">
+                                    <label class="b-filter__box b-filter__box--radio">
+                                        <input type="radio" name="radio1" id="rad4" class="b-filter__check" />
+                                        <span class="b-filter__name">За популярністю</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--/b-filter-->
+                </div>
+
+                <div class="g-col g-col--one-fifth">
+                    <label class="g-label">&nbsp;</label>
+                    <button type="button" class="feed__btn feed__btn--csv"><i class="flaticon-csv"></i></button>
+                    <a href="index.html" class="feed__btn"><i class="icon-location"></i> на карті</a>
+                </div>
+            </div><!--/feed__filter-->
+            <!--/FEED FILTER END-->
+
+            <ul class="feed-list">
+                <li class="feed-list__item">
+                    <a href="#" class="feed__thumb">
+                        <img src="http://placehold.it/100x75" class="feed__img" alt="Photo" />
+                    </a>
+                    <div class="feed__item">
+                        <p>
+                            Ц-28 <span class="feed__date"><span class="feed__def">створено</span> 03.01.2016</span>
+                            <a href="#" class="feed__title">Незадовільна температура опалення</a>
+                        </p>
+                        <p>
+                            <span class="feed__def">Адреса:</span> проспект академіка Глушкова, 22
+                            <br />
+                            <span class="feed__def">Відповідальний:</span> Підрозділ ”Київські теплові мережі” [Фоменко Олександр Валерійович]
+                        </p>
+                        <div class="feed-state">
+                            <span class="feed-state__title feed-state__title--success">Виконано</span>
+                            <span class="feed-state__date">9.01.2016</span>
+                            <span class="feed-state__count">
+                                <i class="flaticon-stickman190"></i>
+                                <span class="feed-state__label">15</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="feed-list__item">
+                    <a href="#" class="feed__thumb">
+                        <img src="http://placehold.it/100x75" class="feed__img" alt="Photo" />
+                    </a>
+                    <div class="feed__item">
+                        <p>
+                            A-68 <span class="feed__date"><span class="feed__def">створено</span> 03.01.2016</span>
+                            <a href="#" class="feed__title">Не працює пасажирський ліфт</a>
+                        </p>
+                        <p>
+                            <span class="feed__def">Адреса:</span> вулиця Шолом-Алейхема, 24
+                            <br />
+                            <span class="feed__def">Відповідальний:</span> ЖЕК-301 [в.о. Онуфрійчук Вадим Міхайлович]
+                        </p>
+                        <div class="feed-state">
+                            <span class="feed-state__title">В роботі</span>
+                            <span class="feed-state__date">9.01.2016</span>
+                            <span class="feed-state__count">
+                                <i class="flaticon-stickman190"></i>
+                                <span class="feed-state__label">15</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="feed-list__item">
+                    <a href="#" class="feed__thumb">
+                        <img src="http://placehold.it/100x75" class="feed__img" alt="Photo" />
+                    </a>
+                    <div class="feed__item">
+                        <p>
+                            Ц-28 <span class="feed__date"><span class="feed__def">створено</span> 03.01.2016</span>
+                            <a href="#" class="feed__title">Незадовільна температура опалення</a>
+                        </p>
+                        <p>
+                            <span class="feed__def">Адреса:</span> проспект академіка Глушкова, 22
+                            <br />
+                            <span class="feed__def">Відповідальний:</span> Підрозділ ”Київські теплові мережі” [Фоменко Олександр Валерійович]
+                        </p>
+                        <div class="feed-state">
+                            <span class="feed-state__title feed-state__title--success">Виконано</span>
+                            <span class="feed-state__date">9.01.2016</span>
+                            <span class="feed-state__count">
+                                <i class="flaticon-stickman190"></i>
+                                <span class="feed-state__label">15</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="feed-list__item">
+                    <a href="#" class="feed__thumb">
+                        <img src="http://placehold.it/100x75" class="feed__img" alt="Photo" />
+                    </a>
+                    <div class="feed__item">
+                        <p>
+                            A-68 <span class="feed__date"><span class="feed__def">створено</span> 03.01.2016</span>
+                            <a href="#" class="feed__title">Не працює пасажирський ліфт</a>
+                        </p>
+                        <p>
+                            <span class="feed__def">Адреса:</span> вулиця Шолом-Алейхема, 24
+                            <br />
+                            <span class="feed__def">Відповідальний:</span> ЖЕК-301 [в.о. Онуфрійчук Вадим Міхайлович]
+                        </p>
+                        <div class="feed-state">
+                            <span class="feed-state__title feed-state__title--danger">Не виконано</span>
+                            <span class="feed-state__date">9.01.2016</span>
+                            <span class="feed-state__count">
+                                <i class="flaticon-stickman190"></i>
+                                <span class="feed-state__label">15</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="feed-list__item">
+                    <a href="#" class="feed__thumb">
+                        <img src="http://placehold.it/100x75" class="feed__img" alt="Photo" />
+                    </a>
+                    <div class="feed__item">
+                        <p>
+                            Ц-28 <span class="feed__date"><span class="feed__def">створено</span> 03.01.2016</span>
+                            <a href="#" class="feed__title">Незадовільна температура опалення</a>
+                        </p>
+                        <p>
+                            <span class="feed__def">Адреса:</span> проспект академіка Глушкова, 22
+                            <br />
+                            <span class="feed__def">Відповідальний:</span> Підрозділ ”Київські теплові мережі” [Фоменко Олександр Валерійович]
+                        </p>
+                        <div class="feed-state">
+                            <span class="feed-state__title feed-state__title--success">Виконано</span>
+                            <span class="feed-state__date">9.01.2016</span>
+                            <span class="feed-state__count">
+                                <i class="flaticon-stickman190"></i>
+                                <span class="feed-state__label">15</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="feed-list__item">
+                    <a href="#" class="feed__thumb">
+                        <img src="http://placehold.it/100x75" class="feed__img" alt="Photo" />
+                    </a>
+                    <div class="feed__item">
+                        <p>
+                            A-68 <span class="feed__date"><span class="feed__def">створено</span> 03.01.2016</span>
+                            <a href="#" class="feed__title">Не працює пасажирський ліфт</a>
+                        </p>
+                        <p>
+                            <span class="feed__def">Адреса:</span> вулиця Шолом-Алейхема, 24
+                            <br />
+                            <span class="feed__def">Відповідальний:</span> ЖЕК-301 [в.о. Онуфрійчук Вадим Міхайлович]
+                        </p>
+                        <div class="feed-state">
+                            <span class="feed-state__title">В роботі</span>
+                            <span class="feed-state__date">9.01.2016</span>
+                            <span class="feed-state__count">
+                                <i class="flaticon-stickman190"></i>
+                                <span class="feed-state__label">15</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="feed-list__item">
+                    <a href="#" class="feed__thumb">
+                        <img src="http://placehold.it/100x75" class="feed__img" alt="Photo" />
+                    </a>
+                    <div class="feed__item">
+                        <p>
+                            Ц-28 <span class="feed__date"><span class="feed__def">створено</span> 03.01.2016</span>
+                            <a href="#" class="feed__title">Незадовільна температура опалення</a>
+                        </p>
+                        <p>
+                            <span class="feed__def">Адреса:</span> проспект академіка Глушкова, 22
+                            <br />
+                            <span class="feed__def">Відповідальний:</span> Підрозділ ”Київські теплові мережі” [Фоменко Олександр Валерійович]
+                        </p>
+                        <div class="feed-state">
+                            <span class="feed-state__title feed-state__title--success">Виконано</span>
+                            <span class="feed-state__date">9.01.2016</span>
+                            <span class="feed-state__count">
+                                <i class="flaticon-stickman190"></i>
+                                <span class="feed-state__label">15</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="feed-list__item">
+                    <a href="#" class="feed__thumb">
+                        <img src="http://placehold.it/100x75" class="feed__img" alt="Photo" />
+                    </a>
+                    <div class="feed__item">
+                        <p>
+                            A-68 <span class="feed__date"><span class="feed__def">створено</span> 03.01.2016</span>
+                            <a href="#" class="feed__title">Не працює пасажирський ліфт</a>
+                        </p>
+                        <p>
+                            <span class="feed__def">Адреса:</span> вулиця Шолом-Алейхема, 24
+                            <br />
+                            <span class="feed__def">Відповідальний:</span> ЖЕК-301 [в.о. Онуфрійчук Вадим Міхайлович]
+                        </p>
+                        <div class="feed-state">
+                            <span class="feed-state__title feed-state__title--danger">Не виконано</span>
+                            <span class="feed-state__date">9.01.2016</span>
+                            <span class="feed-state__count">
+                                <i class="flaticon-stickman190"></i>
+                                <span class="feed-state__label">15</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="pagination">
+                <span class="pagination__item pagination__item--current">1</span>
+                <a href="#" class="pagination__item">2</a>
+                <a href="#" class="pagination__item">3</a>
+                <a href="#" class="pagination__item">4</a>
+                <a href="#" class="pagination__item">5</a>
+                <a href="#" class="pagination__item">...</a>
+                <a href="#" class="pagination__item">Наступна&nbsp;></a>
+                <a href="#" class="pagination__item">Остання&nbsp;>></a>
+            </div>
+        </div><!--/feed-->
+    </main>
+    <!--/FEED MAIN SECTION END-->
+
+    <!--MOBILE MENU START-->
+    <nav class="m-menu js-mmenu">
+        <ul class="m-menu__list">
+            <li class="m-menu__item">
+                <label class="m-menu__label">Меню</label>
+            </li>
+            <li class="m-menu__item">
+                <a href="index.html" class="m-menu__link">Головна</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="#" class="m-menu__link">Залишити звернення</a>
+                <ul class="m-submenu">
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Пункт 1</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Пункт 2</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Пункт 3</a>
+                    </li>
+                    <li class="m-submenu__item">
+                        <a href="#" class="m-submenu__link">Пункт4</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="m-menu__item">
+                <a href="#check" class="m-menu__link" data-modal="#check">Перевірити виконання</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="#login" class="m-menu__link" data-modal="#login"><i class="flaticon-key60"></i> Кабінет</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="about.html" class="m-menu__link"><i class="flaticon-round66"></i> Про нас</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="search.html" class="m-menu__link"><i class="flaticon-magnifier52"></i> Пошук</a>
+            </li>
+        </ul>
+    </nav>
+    <!--/MOBILE MENU END-->
+
+    <!--MODAL WINDOWS START-->
+    <div class="modal" id="login">
+        <form class="modal__content">
+            <div class="g-title-h1"><i class="flaticon-key60"></i> Кабінет</div>
+            <label class="g-label">E-mail</label>
+            <input type="email" class="g-input" required />
+            <label class="g-label">Пароль</label>
+            <input type="password" class="g-input" required />
+            <div class="g-row">
+                <div class="g-col g-col--one-half">
+                    <a href="#">Забули пароль?</a>
+                    <br />
+                    <a href="regist.html">Реєстрація</a>
+                </div>
+                <div class="g-col g-col--one-half">
+                    <button type="submit" class="g-btn g-full-width">увійти</button>
+                </div>
+            </div>
+            <div class="g-text-center">
+                <p>АБО</p>
+                <a href="#"><img src="http://placehold.it/100x40" alt="" /></a>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal" id="check">
+        <form class="modal__content">
+            <div class="g-title-h1">Перевірити виконання</div>
+            <label class="g-label">Номер звернення</label>
+            <input type="text" class="g-input" required />
+            <label class="g-label">Рік</label>
+            <select class="g-select">
+                <option selected>2016</option>
+                <option>2015</option>
+                <option>2014</option>
+                <option>2013</option>
+            </select>
+            <button type="submit" class="g-btn">перевірити</button>
+        </form>
+    </div>
+    <!--/MODAL WINDOWS END-->
+
+    <!--FOOTER START-->
+    <footer class="footer">
+
+        <!--FOOTER MAIN START-->
+        <div class="footer__main">
+            <div class="g-container">
+                <div class="g-col g-col--one-third">
+                    <a href="#" class="logo">
+                        Миколаївська міська рада
+                        <!--Николаевский городской совет-->
+                        <span class="logo__caption">Контактний центр</span>
+                    </a>
+                </div>
+                <div class="g-col g-col--one-third">
+                    <a href="tel:+380512373010" class="footer__tel"><i class="flaticon-telephone60"></i>(0512) 37-30-10, 15-88</a>
+                </div>
+                <div class="g-col g-col--one-third">
+                    <form class="f-search">
+                        <label class="g-visuallyhidden">Пошук</label>
+                        <input type="search" class="f-search__input" placeholder="Пошук по порталу" />
+                        <button type="submit" class="f-search__btn"><i class="flaticon-magnifier52"></i></button>
+                    </form>
+                </div>
+            </div><!--/g-container-->
+        </div>
+        <!--/FOOTER MAIN END-->
+
+        <!--FOOTER SOLE START-->
+        <div class="footer__sole">
+            <div class="g-container">
+                <div class="footer__caption">
+                    <i class="icon-copyright"></i>2015 Миколаївська міська рада
+                    <br />
+                    Розробник: Kitsoft
+                </div>
+
+                <ul class="social">
+                    <li class="social__item">
+                        <a href="#" class="social__link social__link--fbk" target="_blank">
+                            <i class="icon-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link social__link--twr" target="_blank">
+                            <i class="icon-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link social__link--ins" target="_blank">
+                            <i class="icon-instagramm"></i>
+                        </a>    
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link social__link--ybe" target="_blank">
+                            <i class="icon-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#" class="social__link social__link--rss" target="_blank">
+                            <i class="icon-rss"></i>
+                        </a>
+                    </li>
+                </ul>
+                
+                <ul class="f-menu">
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Контакти</a>
+                    </li>
+                    <li class="f-menu__item">
+                        <a href="#" class="f-menu__link">Мапа порталу</a>
+                    </li>
+                </ul>
+            </div><!--/g-container-->
+        </div>
+        <!--/FOOTER SOLE END-->
+    </footer>
+    <!--/FOOTER END-->
+
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.4.min.js"><\/script>')</script>
+    <script src="js/app.min.js"></script>
+
+    
+</body>
+</html>

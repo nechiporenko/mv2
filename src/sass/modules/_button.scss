@@ -1,0 +1,38 @@
+﻿@import "base";
+/* Buttons */
+.g-btn{
+    display: inline-block;
+    vertical-align:middle;
+    @include px2rem(height, 47px);
+    @include px2rem(padding, 0 10px);
+    color:#fff;
+    text-align: center;
+    @include font-size(18px);
+    @include px2rem(line-height, 42px);
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: $primary;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom:6px solid #125076;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &:hover,
+    &:focus,
+    &:active{
+        color:#fff;
+        background-color:#125076;
+        border-bottom-color:$primary;
+        outline:0;
+    }
+
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        vertical-align:middle;
+    }
+
+    @include media($desktop){
+        @include px2rem(padding, 0 36px);
+    }
+}
