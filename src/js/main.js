@@ -254,7 +254,7 @@ jQuery(document).ready(function ($) {
             axis: "y",
             size: 10,
             sizethumb: 30,
-            turnOffWheel: false,
+            turnOffWheel: true,
             onScroll: function (percent, offset) { },
         }
 
