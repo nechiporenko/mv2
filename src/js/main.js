@@ -250,21 +250,13 @@ jQuery(document).ready(function ($) {
     // Фильтры
     //---------------------------------------------------------------------------------------
     function initScroller() {//скроллер
-        var options = {
-            axis: "y",
-            size: 10,
-            sizethumb: 30,
-            turnOffWheel: true,
-            onScroll: function (percent, offset) { },
-        }
-
-        $('.js-scroll').each(function () {
-            var current = '#' + $(this).attr('id');
-            new Miniscroll(current, options);
+        $('.js-scroll').slimScroll({
+            height: '220px',
+            size: '8px',
+            color: '#163555'
         });
     }
-    if($('.js-scroll').length){initScroller()}
-
+    if ($('.js-scroll').length) { initScroller() }
 
     function initCheckboxList() {
         var $list = $('.js-checkbox-list'),
